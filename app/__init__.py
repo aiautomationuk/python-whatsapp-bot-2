@@ -14,3 +14,6 @@ def create_app():
     app.register_blueprint(webhook_blueprint)
 
     return app
+
+# Expose the app instance for Gunicorn
+app = create_app()
